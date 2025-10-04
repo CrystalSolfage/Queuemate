@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - QueueMate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+        .btn-secondary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        .highlight-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="clock" class="h-8 w-8 text-blue-500"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Queue<span class="text-blue-500">Mate</span></span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="how-it-works.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">How It Works</a>
+                        <a href="#" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Pricing</a>
+                        <a href="for-customers.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">For Customers</a>
+                        <a href="for-queuemates.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">For QueueMates</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="contact.html" class="border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu" class="block h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="how-it-works.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">How It Works</a>
+                <a href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Pricing</a>
+                <a href="for-customers.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">For Customers</a>
+                <a href="for-queuemates.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">For QueueMates</a>
+                <a href="contact.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Simple, Transparent Pricing
+            </h1>
+            <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100">
+                Pay only for the time you need or save with our subscription plans
+            </p>
+        </div>
+    </div>
+
+    <!-- Qbucks System Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Qbucks System</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    1 Qbuck = 1 minute of service
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Our flexible system lets you pay for exactly what you need
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="clock"></i>
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Pay-as-you-go</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Standard rate of R2.20 per Qbuck (R2.20 per minute)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="percent"></i>
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Bundle Discounts</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                5% off for 100+ Qbucks, 10% off for 250+ Qbucks
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="zap"></i>
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Peak Time Rate</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                +20% during high demand periods (weekends/holidays)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Pricing Plans</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Choose what works for you
+                </p>
+            </div>
+
+            <div class="mt-16 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
+                    <div class="p-6">
+                        <h2 class="text-lg leading-6 font-medium text-gray-900">Pay-as-you-go</h2>
+                        <p class="mt-4 text-sm text-gray-500">
+                            For occasional users
+                        </p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">R2.20</span>
+                            <span class="text-base font-medium text-gray-500">/min</span>
+                        </p>
+                        <a href="https://wa.me/27627096838" class="btn-primary text-white mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium hover:opacity-90">
+                            Get started
+                        </a>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">No commitments</span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">Pay per minute used</span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">Cancel anytime</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200 highlight-card">
+                    <div class="p-6">
+                        <div class="flex justify-between">
+                            <h2 class="text-lg leading-6 font-medium text-gray-900">Qbucks Bundle</h2>
+                            <p class="flex-shrink-0 bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full ml-4">Most Popular</p>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500">
+                            For regular users who want to save
+                        </p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">From R1.98</span>
+                            <span class="text-base font-medium text-gray-500">/min</span>
+                        </p>
+                        <a href="https://wa.me/27637096838" class="btn-primary text-white mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium hover:opacity-90">
+                            Get started
+                        </a>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">5-10% discount</span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">100+ Qbucks: R2.09/min</span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">250+ Qbucks: R1.98/min</span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">No expiration</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
+                    <div class="p-6">
+                        <h2 class="text-lg leading-6 font-medium text-gray-900">Unlimited</h2>
+                        <p class="mt-4 text-sm text-gray-500">
+                            For frequent users who want peace of mind
+                        </p>
+                        <p class="mt-8">
+                            <span class="text-4xl font-extrabold text-gray-900">R999</span>
+                            <span class="text-base font-medium text-gray-500">/mo</span>
+                        </p>
+                        <a href="https://wa.me/27627096838" class="btn-primary text-white mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium hover:opacity-90">
+                            Get started
+                        </a>
+                    </div>
+                    <div class="pt-6 pb-8 px-6">
+                        <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h3>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">Unlimited QueueMate requests</span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">Priority scheduling</span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">No peak time surcharge</span>
+                            </li>
+                            <li class="flex space-x-3">
+                                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                                <span class="text-sm text-gray-500">Cancel anytime</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">FAQs</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Frequently asked questions
+                </p>
+            </div>
+
+            <div class="mt-12">
+                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12">
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            How do I purchase Qbucks?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            Simply message us on WhatsApp (+27 62 709 6838) and we'll guide you through the purchase process. You can pay via EFT or mobile payment.
+                        </dd>
+                    </div>
+
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            Do Qbucks expire?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            No, your Qbucks balance never expires. Use them whenever you need our services.
+                        </dd>
+                    </div>
+
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            What happens if my QueueMate waits longer than estimated?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            We'll notify you if the wait is longer than expected. You'll only be charged for the actual time waited.
+                        </dd>
+                    </div>
+
+                    <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                            Can I get a refund for unused Qbucks?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                            Yes, unused Qbucks can be refunded minus a 10% processing fee. Contact our support team for assistance.
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="gradient-bg">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                Still have questions?
+            </h2>
+            <p class="mt-4 max-w-3xl mx-auto text-xl text-blue-100">
+                Our team is happy to help you choose the right plan for your needs.
+            </p>
+            <div class="mt-8 flex justify-center">
+                <div class="inline-flex rounded-md shadow">
+                    <a href="https://wa.me/27627096838" class="btn-primary text-white px-8 py-3 border border-transparent rounded-md shadow-sm text-lg font-medium hover:opacity-90">
+                        Contact us on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+                <div class="col-span-2">
+                    <h3 class="text-white text-xl font-bold">Queue<span class="text-blue-400">Mate</span></h3>
+                    <p class="mt-4 text-gray-300 text-sm">
+                        We save you time by waiting in line for you. Queue smarter, not longer.
+                    </p>
+                    <p class="mt-4 text-gray-300 text-sm">
+                        © 2025 QueueMate. All rights reserved.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase">Navigation</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="index.html" class="text-gray-300 hover:text-white block text-sm">Home</a>
+                        <a href="how-it-works.html" class="text-gray-300 hover:text-white block text-sm">How It Works</a>
+                        <a href="#" class="text-gray-300 hover:text-white block text-sm">Pricing</a>
+                        <a href="for-customers.html" class="text-gray-300 hover:text-white block text-sm">For Customers</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase">Connect</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="for-queuemates.html" class="text-gray-300 hover:text-white block text-sm">Become a QueueMate</a>
+                        <a href="contact.html" class="text-gray-300 hover:text-white block text-sm">Contact Us</a>
+                        <a href="help.html" class="text-gray-300 hover:text-white block text-sm">Help & Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            feather.replace();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueueMate - Queue Smarter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+        .btn-secondary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="clock" class="h-8 w-8 text-blue-500"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Queue<span class="text-blue-500">Mate</span></span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="how-it-works.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">How It Works</a>
+                        <a href="pricing.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Pricing</a>
+                        <a href="for-customers.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">For Customers</a>
+                        <a href="for-queuemates.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">For QueueMates</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <a href="contact.html" class="border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Contact</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-feather="menu" class="block h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
+                <a href="how-it-works.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">How It Works</a>
+                <a href="pricing.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Pricing</a>
+                <a href="for-customers.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">For Customers</a>
+                <a href="for-queuemates.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">For QueueMates</a>
+                <a href="contact.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                    Never wait in line again
+                </h1>
+                <p class="mt-6 max-w-lg mx-auto text-xl text-blue-100">
+                    Queue Smarter with QueueMate. We save you time so you can focus on what matters.
+                </p>
+                <div class="mt-10 flex justify-center space-x-4">
+                    <a href="for-customers.html" class="btn-primary text-white px-8 py-3 border border-transparent rounded-md shadow-sm text-lg font-medium hover:opacity-90 pulse-animation">
+                        Book a QueueMate
+                    </a>
+                    <a href="for-queuemates.html" class="btn-secondary text-white px-8 py-3 border border-transparent rounded-md shadow-sm text-lg font-medium hover:opacity-90">
+                        Join as QueueMate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">How it works</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Save hours with just 3 simple steps
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            1
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Book a QueueMate</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Send us your location and estimated wait time through our WhatsApp bot.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            2
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Your QueueMate waits</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                We'll assign a verified QueueMate to wait in line for you.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            3
+                        </div>
+                        <div class="ml-16">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Show up when ready</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                We'll notify you when it's your turn. Walk in without the wait!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Benefits</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Why choose QueueMate
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                <i data-feather="clock" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <h3 class="text-lg font-medium text-gray-900">Save Time</h3>
+                                <p class="mt-1 text-sm text-gray-500">
+                                    Get back hours of your day. We wait so you don't have to.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                <i data-feather="dollar-sign" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <h3 class="text-lg font-medium text-gray-900">Affordable</h3>
+                                <p class="mt-1 text-sm text-gray-500">
+                                    Starting at just R2.20 per minute. Pay only for the time you need.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                <i data-feather="shield" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <h3 class="text-lg font-medium text-gray-900">Reliable</h3>
+                                <p class="mt-1 text-sm text-gray-500">
+                                    Verified QueueMates with real-time updates on your wait status.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Preview Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Pricing</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Simple, transparent pricing
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="px-6 py-8 bg-gray-50 sm:p-10 sm:pb-6">
+                        <div>
+                            <h3 class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-blue-100 text-blue-600">Pay-as-you-go</h3>
+                        </div>
+                        <div class="mt-4 flex items-baseline text-5xl font-extrabold">
+                            R2.20
+                            <span class="ml-1 text-2xl font-medium text-gray-500">/min</span>
+                        </div>
+                        <p class="mt-5 text-lg text-gray-500">
+                            Pay per minute with no commitments
+                        </p>
+                    </div>
+                    <div class="px-6 pt-6 pb-8 bg-gray-50 sm:p-10 sm:pt-6">
+                        <a href="pricing.html" class="btn-primary text-white w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md hover:opacity-90">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden transform scale-105 z-10">
+                    <div class="px-6 py-8 bg-blue-50 sm:p-10 sm:pb-6">
+                        <div>
+                            <h3 class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-blue-200 text-blue-700">Bundle Discount</h3>
+                        </div>
+                        <div class="mt-4 flex items-baseline text-5xl font-extrabold text-blue-600">
+                            5-10%
+                            <span class="ml-1 text-2xl font-medium text-blue-500">off</span>
+                        </div>
+                        <p class="mt-5 text-lg text-gray-600">
+                            Save with bulk Qbucks purchases
+                        </p>
+                    </div>
+                    <div class="px-6 pt-6 pb-8 bg-blue-50 sm:p-10 sm:pt-6">
+                        <a href="pricing.html" class="btn-primary text-white w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md hover:opacity-90">
+                            View bundles
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="px-6 py-8 bg-gray-50 sm:p-10 sm:pb-6">
+                        <div>
+                            <h3 class="inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-green-100 text-green-600">Subscription</h3>
+                        </div>
+                        <div class="mt-4 flex items-baseline text-5xl font-extrabold">
+                            From
+                            <span class="ml-1">R199</span>
+                            <span class="ml-1 text-2xl font-medium text-gray-500">/mo</span>
+                        </div>
+                        <p class="mt-5 text-lg text-gray-500">
+                            Unlimited waits for frequent users
+                        </p>
+                    </div>
+                    <div class="px-6 pt-6 pb-8 bg-gray-50 sm:p-10 sm:pt-6">
+                        <a href="pricing.html" class="btn-primary text-white w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md hover:opacity-90">
+                            See plans
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="gradient-bg">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                <span class="block">Ready to skip the line?</span>
+                <span class="block text-blue-100">Start using QueueMate today.</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div class="inline-flex rounded-md shadow">
+                    <a href="https://wa.me/27627096838" class="btn-primary text-white px-8 py-3 border border-transparent rounded-md shadow-sm text-lg font-medium hover:opacity-90">
+                        Book via WhatsApp
+                    </a>
+                </div>
+                <div class="ml-3 inline-flex">
+                    <a href="for-queuemates.html" class="btn-secondary text-white px-8 py-3 border border-transparent rounded-md shadow-sm text-lg font-medium hover:opacity-90">
+                        Become a QueueMate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+                <div class="col-span-2">
+                    <h3 class="text-white text-xl font-bold">Queue<span class="text-blue-400">Mate</span></h3>
+                    <p class="mt-4 text-gray-300 text-sm">
+                        We save you time by waiting in line for you. Queue smarter, not longer.
+                    </p>
+                    <p class="mt-4 text-gray-300 text-sm">
+                        © 2025 QueueMate. All rights reserved.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase">Navigation</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="#" class="text-gray-300 hover:text-white block text-sm">Home</a>
+                        <a href="how-it-works.html" class="text-gray-300 hover:text-white block text-sm">How It Works</a>
+                        <a href="pricing.html" class="text-gray-300 hover:text-white block text-sm">Pricing</a>
+                        <a href="for-customers.html" class="text-gray-300 hover:text-white block text-sm">For Customers</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white text-sm font-semibold tracking-wider uppercase">Connect</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="for-queuemates.html" class="text-gray-300 hover:text-white block text-sm">Become a QueueMate</a>
+                        <a href="contact.html" class="text-gray-300 hover:text-white block text-sm">Contact Us</a>
+                        <a href="help.html" class="text-gray-300 hover:text-white block text-sm">Help & Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            feather.replace();
+        });
+    </script>
+</body>
+</html>
